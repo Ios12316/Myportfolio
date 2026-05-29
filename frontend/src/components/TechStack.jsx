@@ -10,6 +10,7 @@ import {
     SiExpress,
     SiMongodb,
     SiTailwindcss,
+    SiVercel,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 
@@ -47,6 +48,10 @@ const backendSkills = [
         icon: <SiExpress size={50} />,
     },
     {
+        name: "JavaScript",
+        icon: <FaJs size={50} />,
+    },
+    {
         name: "MongoDB",
         icon: <SiMongodb size={50} />,
     },
@@ -54,7 +59,12 @@ const backendSkills = [
         name: "GitHub",
         icon: <FaGithub size={50} />,
     },
+    {
+        name: "Vercel",
+        icon: <SiVercel size={50} />,
+    },
 ];
+
 
 export default function TechStack() {
     return (
@@ -109,7 +119,7 @@ export default function TechStack() {
                         >
                             Backend & Tools
                         </motion.h3>
-                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                             {backendSkills.map((skill, index) => (
                                 <motion.div key={index} 
                                 initial={{ opacity: 0, y: 40 }}
