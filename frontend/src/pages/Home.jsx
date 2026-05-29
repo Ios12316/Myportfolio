@@ -1,5 +1,6 @@
 import Hero from "../components/Hero.jsx";
 import TechStack from "../components/TechStack.jsx";
+import AboutPreview from "../components/AboutPreview.jsx";
 
 
 
@@ -9,6 +10,7 @@ function Home() {
         <div>
             <Hero />
             <TechStack />
+            <AboutPreview />
         </div>
     );
 }
