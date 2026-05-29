@@ -80,15 +80,34 @@ function Contact() {
     e.preventDefault();
 
     setLoading(true);
-
     setSuccess("");
-
     setError("");
+
+    const trimmedName = formData.name.trim();
+    const trimmedEmail = formData.email.trim();
+    const trimmedMessage = formData.message.trim();
+
+    if (!trimmedName || !trimmedEmail || !trimmedMessage) {
+      setError("All fields are required");
+      setLoading(false);
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(trimmedEmail)) {
+      setError("Please enter a valid email address");
+      setLoading(false);
+      return;
+    }
 
     try {
       const res = await axios.post(
         "http://localhost:3000/api/contact",
-        formData
+        {
+          name: trimmedName,
+          email: trimmedEmail,
+          message: trimmedMessage,
+        }
       );
 
       setSuccess(res.data.message);
