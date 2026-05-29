@@ -3,6 +3,7 @@ import { createMessage, getAllMessages, deleteMessage} from "../controllers/cont
 
 const router = express.Router();
 
+router.post("/contact", createMessage);
 router.post("/contacts", createMessage);
 router.get("/messages", getAllMessages);
 router.delete("/messages/:id", deleteMessage);
