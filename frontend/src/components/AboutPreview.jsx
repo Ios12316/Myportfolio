@@ -50,15 +50,7 @@ function AboutPreview() {
           className="grid grid-cols-2 gap-6"
         >
 
-          <div className="bg-[#111] border border-gray-800 rounded-2xl p-8 text-center hover:border-blue-500 transition">
-            <h3 className="text-5xl font-bold text-blue-500 mb-3">
-              3+
-            </h3>
-
-            <p className="text-gray-400">
-              Projects Completed
-            </p>
-          </div>
+        
 
           <div className="bg-[#111] border border-gray-800 rounded-2xl p-8 text-center hover:border-blue-500 transition">
             <h3 className="text-5xl font-bold text-blue-500 mb-3">
