@@ -50,7 +50,7 @@ function About() {
           transition={{ duration: 0.8 }}
           className="mb-20"
         >
-          <h2 className="text-3xl font-bold mb-6 text-blue-500">
+          {/* <h2 className="text-3xl font-bold mb-6 text-blue-500">
             My Journey
           </h2>
 
@@ -61,6 +61,95 @@ function About() {
             development and began building real-world projects
             using the MERN stack.
           </p>
+          TIMELINE */}
+<div className="mb-20">
+  <h2 className="text-3xl font-bold mb-12 text-blue-500">
+    My Journey Timeline
+  </h2>
+
+  <div className="border-l-2 border-blue-500 pl-8 space-y-12">
+
+    <div>
+      <span className="text-blue-500 font-bold">
+        2022
+      </span>
+
+      <h3 className="text-xl font-semibold mt-2">
+        Started B.Sc. Economics
+      </h3>
+
+      <p className="text-gray-400 mt-2">
+        Began my academic journey at Adekunle Ajasin
+        University, Akungba-Akoko studying Economics.
+      </p>
+    </div>
+
+    <div>
+      <span className="text-blue-500 font-bold">
+        February 2024
+      </span>
+
+      <h3 className="text-xl font-semibold mt-2">
+        Started Learning Web Development
+      </h3>
+
+      <p className="text-gray-400 mt-2">
+        Started learning HTML, CSS and JavaScript,
+        building a strong foundation in frontend
+        development.
+      </p>
+    </div>
+
+    <div>
+      <span className="text-blue-500 font-bold">
+        2025
+      </span>
+
+      <h3 className="text-xl font-semibold mt-2">
+        Transitioned Into Full Stack Development
+      </h3>
+
+      <p className="text-gray-400 mt-2">
+        Expanded into backend development using
+        Node.js, Express and MongoDB while building
+        complete MERN stack applications.
+      </p>
+    </div>
+
+    <div>
+      <span className="text-blue-500 font-bold">
+        2026
+      </span>
+
+      <h3 className="text-xl font-semibold mt-2">
+        Built Real-World Projects
+      </h3>
+
+      <p className="text-gray-400 mt-2">
+        Developed and deployed a Full Stack
+        Authentication System and a Personal
+        Portfolio Website.
+      </p>
+    </div>
+
+    <div>
+      <span className="text-blue-500 font-bold">
+        Future Goal
+      </span>
+
+      <h3 className="text-xl font-semibold mt-2">
+        Professional Software Engineer
+      </h3>
+
+      <p className="text-gray-400 mt-2">
+        Continue growing as a Full Stack Developer,
+        contribute to impactful projects and pursue
+        international opportunities in technology.
+      </p>
+    </div>
+
+  </div>
+</div>
         </motion.div>
 
         {/* SKILLS */}
