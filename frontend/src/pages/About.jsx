@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
+import PageWrapper from "../components/PageWrapper.jsx";
 
 function About() {
   return (
+    <PageWrapper>
     <div className="min-h-screen px-6 py-20">
       <div className="max-w-6xl mx-auto">
 
@@ -145,6 +147,7 @@ function About() {
 
       </div>
     </div>
+    </PageWrapper>
   );
 }
 

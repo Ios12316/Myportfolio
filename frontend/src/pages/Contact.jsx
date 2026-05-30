@@ -11,6 +11,8 @@ import {
   FaWhatsapp
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import PageWrapper from "../components/PageWrapper.jsx";
+
 
 const socials = [
   {
@@ -130,6 +132,7 @@ function Contact() {
   };
 
   return (
+    <PageWrapper>
     <section className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
 
@@ -267,6 +270,7 @@ function Contact() {
         </div>
       </div>
     </section>
+    </PageWrapper>
   );
 }
 

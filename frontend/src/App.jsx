@@ -4,6 +4,8 @@ import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/footer.jsx";
+import ScrollToTopButton from "./components/ScrollToTopButton.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 
 
@@ -11,6 +13,7 @@ import Footer from "./components/footer.jsx";
 function App() {
     return (
         <div className="bg-[#0a0a0a] min-h-screen text-white">
+            <ScrollToTop />
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
@@ -18,6 +21,7 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
             </Routes>
             <Footer />
+            <ScrollToTopButton />
         </div>
     )
 }
