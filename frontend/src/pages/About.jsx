@@ -86,7 +86,7 @@ function About() {
 
     <div>
       <span className="text-blue-500 font-bold">
-        February 2024
+        2024
       </span>
 
       <h3 className="text-xl font-semibold mt-2">
