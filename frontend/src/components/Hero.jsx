@@ -22,7 +22,7 @@ function Hero() {
                         </button>
 
                         <button className="border border-gray-700 hover:border-blue-500 px-8 py-4 rounded-xl text-lg transition ">
-                            Contact Me
+                            <a href="/contact">Contact Me</a>
                         </button>
                     </div>
                     

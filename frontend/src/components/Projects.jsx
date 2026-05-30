@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Portfolio Website",
+    title: "My Portfolio Website",
     description:
       "A modern responsive portfolio website built with React and Tailwind CSS.",
 
@@ -15,33 +15,27 @@ const projects = [
     live: "https://myportfolio-puce-mu.vercel.app",
   },
 
-  {
-    title: "Authentication API",
-    description:
-      "Secure backend authentication system using Node.js, Express and MongoDB.",
+ {
+  title: "Full Stack Authentication System",
 
-    image:
-      "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
+  description:
+    "A full stack authentication application built with React, Node.js, Express and MongoDB. Users can register, login, access protected routes and manage authentication securely.",
 
-    tech: ["Node.js", "Express", "MongoDB"],
+  image:
+    "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
 
-    github: "https://github.com/",
-    live: "https://render.com/",
-  },
+  tech: [
+    "React",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "JWT",
+  ],
 
-  {
-    title: "Full Stack Blog App",
-    description:
-      "A complete MERN stack blog application with authentication and CRUD operations.",
+  github: "https://github.com/Ios12316/Architectural_Portfolio",
 
-    image:
-      "https://images.unsplash.com/photo-1515879218367-8466d910aaa4",
-
-    tech: ["React", "Node.js", "MongoDB"],
-
-    github: "https://github.com/",
-    live: "https://vercel.com/",
-  },
+  live: "https://idowuolakunleproject.vercel.app/",
+}
 ];
 
 function Projects() {

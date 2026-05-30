@@ -1,18 +1,123 @@
-import { Link } from "react-router-dom";
-
-
+import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar() {
-    return (
-        <nav className="flex items-center justify-between px-10 py-6 border-b border-gray-800">
-            <h1 className="text-4xl font-bold text-gray-500"> Idowu Olakunle Samuel</h1>
-            <div className="flex gap-8 text-lg">
-                <a href="/" className="hover:text-blue-500 transition">Home</a>
-                <Link to="/about" className="hover:text-blue-500 transition">About</Link>
-                <Link to="/contact" className="hover:text-blue-500 transition">Contact</Link>
-            </div>
-        </nav>
-    );
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const isActive = (path) => window.location.pathname === path;
+
+  return (
+    <nav className="sticky top-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-gray-800">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+
+        {/* Logo */}
+        <h1 className="text-2xl font-bold text-gray-500">
+         IDOWU OLAKUNLE SAMUEL.G
+        </h1>
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex gap-8">
+          <li>
+            <a
+              href="/"
+              className={
+                isActive("/")
+                  ? "text-blue-500"
+                  : "hover:text-blue-500 transition"
+              }
+            >
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="/about"
+              className={
+                isActive("/about")
+                  ? "text-blue-500"
+                  : "hover:text-blue-500 transition"
+              }
+            >
+              About
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="/contact"
+              className={
+                isActive("/contact")
+                  ? "text-blue-500"
+                  : "hover:text-blue-500 transition"
+              }
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+
+        {/* Mobile Icon */}
+        <button
+          className="md:hidden text-2xl"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="md:hidden border-t border-gray-800">
+          <ul className="flex flex-col items-center gap-6 py-6">
+
+            <li>
+              <a
+                href="/"
+                className={
+                  isActive("/")
+                    ? "text-blue-500"
+                    : "hover:text-blue-500 transition"
+                }
+                onClick={() => setMenuOpen(false)}
+              >
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="/about"
+                className={
+                  isActive("/about")
+                    ? "text-blue-500"
+                    : "hover:text-blue-500 transition"
+                }
+                onClick={() => setMenuOpen(false)}
+              >
+                About
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="/contact"
+                className={
+                  isActive("/contact")
+                    ? "text-blue-500"
+                    : "hover:text-blue-500 transition"
+                }
+                onClick={() => setMenuOpen(false)}
+              >
+                Contact
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      )}
+    </nav>
+  );
 }
 
 export default Navbar;

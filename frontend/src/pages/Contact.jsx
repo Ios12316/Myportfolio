@@ -7,7 +7,8 @@ import {
   FaFacebookF, 
   FaEnvelope, 
   FaLinkedinIn, 
-  FaTiktok 
+  FaTiktok,
+  FaWhatsapp
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -15,45 +16,46 @@ const socials = [
   {
     name: "Email",
     username: "Send an Email",
-    url: "mailto:your.email@example.com",
+    url: "mailto:[idowus187@gmail.com]",
     icon: <FaEnvelope />,
     iconColor: "bg-red-500/10 text-red-500 group-hover:bg-red-500 group-hover:text-white",
   },
   {
     name: "LinkedIn",
     username: "Connect on LinkedIn",
-    url: "https://linkedin.com/in/yourusername",
+    url: "https://www.linkedin.com/in/idowuolakunlesamuel",
     icon: <FaLinkedinIn />,
     iconColor: "bg-blue-600/10 text-blue-600 group-hover:bg-blue-600 group-hover:text-white",
   },
   {
     name: "Instagram",
     username: "Follow on Instagram",
-    url: "https://instagram.com/yourusername",
+    url: "https://instagram.com/idowuos",
     icon: <FaInstagram />,
     iconColor: "bg-pink-500/10 text-pink-500 group-hover:bg-pink-500 group-hover:text-white",
   },
-  {
-    name: "Twitter / X",
-    username: "Follow on X",
-    url: "https://twitter.com/yourusername",
-    icon: <FaXTwitter />,
-    iconColor: "bg-gray-700/10 text-gray-200 group-hover:bg-white group-hover:text-black",
-  },
-  {
-    name: "Facebook",
-    username: "Connect on Facebook",
-    url: "https://facebook.com/yourusername",
-    icon: <FaFacebookF />,
-    iconColor: "bg-blue-500/10 text-blue-500 group-hover:bg-blue-500 group-hover:text-white",
-  },
-  {
-    name: "TikTok",
-    username: "Watch on TikTok",
-    url: "https://tiktok.com/@yourusername",
-    icon: <FaTiktok />,
-    iconColor: "bg-teal-500/10 text-teal-500 group-hover:bg-teal-500 group-hover:text-white",
-  },
+//   {
+//     name: "Twitter / X",
+//     username: "Follow on X",
+//     url: "https://twitter.com/yourusername",
+//     icon: <FaXTwitter />,
+//     iconColor: "bg-gray-700/10 text-gray-200 group-hover:bg-white group-hover:text-black",
+//   },
+//   {
+//     name: "Facebook",
+//     username: "Connect on Facebook",
+//     url: "https://facebook.com/yourusername",
+//     icon: <FaFacebookF />,
+//     iconColor: "bg-blue-500/10 text-blue-500 group-hover:bg-blue-500 group-hover:text-white",
+//   },
+//   
+{
+    name: "WhatsApp",
+    username: "Chat on WhatsApp",
+    url: "https://wa.me/+2348137451940",
+    icon: <FaWhatsapp />,
+    iconColor: "bg-green-500/10 text-green-500 group-hover:bg-green-500 group-hover:text-white",
+},
 ];
 
 function Contact() {
