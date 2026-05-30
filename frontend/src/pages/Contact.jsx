@@ -18,7 +18,7 @@ const socials = [
   {
     name: "Email",
     username: "Send an Email",
-    url: "mailto:[idowus187@gmail.com]",
+    url: "mailto:idowus187@gmail.com",
     icon: <FaEnvelope />,
     iconColor: "bg-red-500/10 text-red-500 group-hover:bg-red-500 group-hover:text-white",
   },
