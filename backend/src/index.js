@@ -23,9 +23,10 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: ["http://localhost:5173", "http://localhost:5174", "https://myportfolio-puce-mu.vercel.app"],
+    origin: ["http://localhost:5173", "http://localhost:5174", "https://idowuolakunleportfolio.vercel.app"],
     credentials: true,
 }));
+
 
 app.use("/api", contactRoutes);
 app.use(errorMiddleware);

@@ -12,7 +12,7 @@ const projects = [
     tech: ["React", "Tailwind", "Framer Motion"],
 
     github: "https://github.com/Ios12316/Myportfolio.git",
-    live: "https://myportfolio-puce-mu.vercel.app",
+    live: "https://idowuolakunleportfolio.vercel.app",
   },
 
  {
