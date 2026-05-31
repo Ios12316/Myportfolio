@@ -1,4 +1,11 @@
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import image1 from "../assets/image1.png";
+import image2 from "../assets/image2.png";
+import home from "../assets/home.png";
+import login from "../assets/login.png";
+import signup from "../assets/signup.png";
+import dashboard from "../assets/dashboard.png";
 
 const projects = [
   {
@@ -6,8 +13,7 @@ const projects = [
     description:
       "A modern responsive portfolio website built with React and Tailwind CSS.",
 
-    image:
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+    image: [ image1, image2 ],
 
     tech: ["React", "Tailwind", "Framer Motion"],
 
@@ -21,8 +27,7 @@ const projects = [
   description:
     "A full stack authentication application built with React, Node.js, Express and MongoDB. Users can register, login, access protected routes and manage authentication securely.",
 
-  image:
-    "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
+  image: [ home, login, signup, dashboard ],
 
   tech: [
     "React",
@@ -35,8 +40,101 @@ const projects = [
   github: "https://github.com/Ios12316/Architectural_Portfolio",
 
   live: "https://idowuolakunleproject.vercel.app/",
-}
+},
 ];
+
+function ProjectImageSlider({ images, title }) {
+  const imageList = Array.isArray(images) ? images : [images];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    if (imageList.length <= 1 || isHovered) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % imageList.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [imageList, isHovered]);
+
+  const handleNext = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % imageList.length);
+  };
+
+  const handlePrev = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + imageList.length) % imageList.length);
+  };
+
+  const handleDotClick = (index, e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setCurrentIndex(index);
+  };
+
+  if (imageList.length === 0) return null;
+
+  return (
+    <div 
+      className="relative h-56 w-full overflow-hidden group"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <AnimatePresence mode="wait">
+        <motion.img
+          key={currentIndex}
+          src={imageList[currentIndex]}
+          alt={`${title} - slide ${currentIndex + 1}`}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </AnimatePresence>
+
+      <div className="absolute inset-0 bg-black/10 group-hover:bg-black/35 transition-colors duration-300 pointer-events-none" />
+
+      {imageList.length > 1 && (
+        <>
+          <button
+            onClick={handlePrev}
+            className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 opacity-0 group-hover:opacity-100 z-10 font-bold"
+            aria-label="Previous image"
+          >
+            &#10094;
+          </button>
+          <button
+            onClick={handleNext}
+            className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 opacity-0 group-hover:opacity-100 z-10 font-bold"
+            aria-label="Next image"
+          >
+            &#10095;
+          </button>
+
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+            {imageList.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={(e) => handleDotClick(idx, e)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  currentIndex === idx 
+                    ? "bg-blue-500 scale-125 shadow-md shadow-blue-500/50" 
+                    : "bg-white/50 hover:bg-white"
+                }`}
+                aria-label={`Go to slide ${idx + 1}`}
+              />
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
 
 function Projects() {
   return (
@@ -68,13 +166,7 @@ function Projects() {
             >
 
               {/* IMAGE */}
-              <div className="h-56 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover hover:scale-110 transition duration-500"
-                />
-              </div>
+              <ProjectImageSlider images={project.image} title={project.title} />
 
               {/* CONTENT */}
               <div className="p-6">
