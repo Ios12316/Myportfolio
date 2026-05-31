@@ -35,7 +35,7 @@ function About() {
           </h2>
 
           <p className="text-gray-300 leading-8 text-lg">
-            I'm Samuel, a passionate Full Stack Developer who enjoys
+            I'm Olakunle, a passionate Full Stack Developer who enjoys
             building modern web applications using React, Node.js,
             Express and MongoDB. I enjoy solving problems,
             learning new technologies and turning ideas into
