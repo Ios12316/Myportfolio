@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import axios from "axios";
+import Api from "../api/axios";
 import { motion } from "framer-motion";
 import { 
   FaInstagram, 
@@ -105,8 +105,8 @@ function Contact() {
     }
 
     try {
-      const res = await axios.post(
-        "http://localhost:3000/api/contact",
+      const res = await Api.post(
+        "/contact",
         {
           name: trimmedName,
           email: trimmedEmail,
