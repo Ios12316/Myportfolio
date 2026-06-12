@@ -7,11 +7,11 @@ function Navbar() {
   const isActive = (path) => window.location.pathname === path;
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-gray-800">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-gray-800">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
         {/* Logo */}
-        <h1 className="text-2xl font-bold text-gray-500">
+        <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-500 whitespace-nowrap">
          IDOWU OLAKUNLE SAMUEL.G
         </h1>
 

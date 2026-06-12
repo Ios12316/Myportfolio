@@ -18,13 +18,19 @@ function Hero() {
                     <span className="text-gray-500">Idowu Olakunle Samuel</span></h1>
                     <p className="text-gray-400 text-lg leading-8 mb-8">I build modern, scalable and responsive web applications with clean user experiences and powerful backend systems.</p>
                     <div className="flex flex-col sm:flex-row gap-5">
-                        <button className="bg-blue-500 hover:bg-blue-600 px-8 py-4 rounded-xl text-lg font-semibold transition ">
+                        <a 
+                            href="#projects" 
+                            className="bg-blue-500 hover:bg-blue-600 px-8 py-4 rounded-xl text-lg font-semibold transition text-center"
+                        >
                             View Projects
-                        </button>
+                        </a>
 
-                        <button className="border border-gray-700 hover:border-blue-500 px-8 py-4 rounded-xl text-lg transition ">
-                            <a href="/contact">Contact Me</a>
-                        </button>
+                        <a 
+                            href="/contact" 
+                            className="border border-gray-700 hover:border-blue-500 px-8 py-4 rounded-xl text-lg transition text-center"
+                        >
+                            Contact Me
+                        </a>
                     </div>
                     
                 </motion.div>

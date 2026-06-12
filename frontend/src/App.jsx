@@ -12,14 +12,16 @@ import ScrollToTop from "./components/ScrollToTop.jsx";
 
 function App() {
     return (
-        <div className="bg-[#0a0a0a] min-h-screen text-white">
+        <div className="bg-[#0a0a0a] min-h-screen text-white flex flex-col">
             <ScrollToTop />
             <Navbar />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-            </Routes>
+            <div className="pt-[68px] md:pt-[73px] flex-grow">
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                </Routes>
+            </div>
             <Footer />
             <ScrollToTopButton />
         </div>

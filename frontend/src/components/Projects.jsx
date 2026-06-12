@@ -6,6 +6,10 @@ import home from "../assets/home.png";
 import login from "../assets/login.png";
 import signup from "../assets/signup.png";
 import dashboard from "../assets/dashboard.png";
+import iosledger1 from "../assets/iosledger1.png";
+import iosledger2 from "../assets/iosledger2.png";
+import iosledger3 from "../assets/iosledger3.png";
+import iosledger4 from "../assets/iosledger4.png";
 
 const projects = [
   {
@@ -21,26 +25,43 @@ const projects = [
     live: "https://idowuolakunleportfolio.vercel.app",
   },
 
- {
-  title: "Full Stack Authentication System",
+  {
+    title: "Full Stack Authentication System",
+    description:
+      "A full stack authentication application built with React, Node.js, Express and MongoDB. Users can register, login, access protected routes and manage authentication securely.",
 
-  description:
-    "A full stack authentication application built with React, Node.js, Express and MongoDB. Users can register, login, access protected routes and manage authentication securely.",
+    image: [ home, login, signup, dashboard ],
 
-  image: [ home, login, signup, dashboard ],
+    tech: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT",
+    ],
 
-  tech: [
-    "React",
-    "Node.js",
-    "Express",
-    "MongoDB",
-    "JWT",
-  ],
+    github: "https://github.com/Ios12316/Architectural_Portfolio",
+    live: "https://idowuolakunleproject.vercel.app/",
+  },
 
-  github: "https://github.com/Ios12316/Architectural_Portfolio",
+  {
+    title: "IOS Ledger",
+    description:
+      "An interactive IOS LEDGER used for tracking financial statements daily or monthly, featuring complete budget control, transactions, and overview metrics.",
 
-  live: "https://idowuolakunleproject.vercel.app/",
-},
+    image: [ iosledger1, iosledger2, iosledger3, iosledger4 ],
+
+    tech: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Tailwind CSS",
+    ],
+
+    github: "https://github.com/Ios12316/Finance-Tracker",
+    live: "https://iosledger.vercel.app/",
+  }
 ];
 
 function ProjectImageSlider({ images, title }) {
@@ -138,7 +159,7 @@ function ProjectImageSlider({ images, title }) {
 
 function Projects() {
   return (
-    <section className="py-24 px-6">
+    <section id="projects" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
 
         <motion.h2
